@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="tf2.jpg">
+    <title>Tables</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Overall</caption>
+        <tr>
+            <th>Person</th>
+            <th>Age</th>
+            <th>Sex</th>
+        </tr>
+        <tr>
+            <td>Alex</td>
+            <td>18</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td>Suzy</td>
+            <td>25</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Jack</td>
+            <td>16</td>
+            <td>Male</td>
+        </tr>
+    </table>
+    <hr>
+    <table>
+        <caption>Height</caption>
+        <tr>
+            <th colspan="2">Height</th>
+            <th>Person</th>
+        </tr>
+        <tr>
+            <th>180</th>
+            <td>Alex</td>
+            <td>David</td>
+        </tr>
+        <tr>
+            <th>190</th>
+            <td>Suzy</td>
+            <td>Mason</td>
+        </tr>
+        <tr>
+            <th>200</th>
+            <td>Igor</td>
+            <td>Brian</td>
+        </tr>
+    </table>
+</body>
+
+</html>
