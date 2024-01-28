@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Usage</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Javascript Usage in HTML</h1>
+    <hr>
+    <p style="font-size: 1.5em; cursor: pointer;" id="ChangeText" onclick="text_change()">Hello World</p>
+    <img src="workplace.jpg" alt="workplace" id="image" width="250" height="150"><br>
+    <button onclick=change_photo(1)>Change to the nature</button>
+    <button onclick=change_photo(0)>Change to the workplace</button>
+
+    <script>
+        function text_change() {
+            document.getElementById("ChangeText").innerHTML = "Bye Javascript!";
+            document.getElementById("ChangeText").style.color = "blue";
+            document.getElementById("ChangeText").style.backgroundColor = "orange";
+        }
+
+        function change_photo(numb) {
+            let pic;
+            if (numb == 1){
+                pic = "nature.jpg";
+            }
+            else {
+                pic = "workplace.jpg";
+            }
+            document.getElementById("image").src = pic;
+        }
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+</body>
+
+</html>
