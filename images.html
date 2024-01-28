@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <link rel="icon" type="image/x-icon" href="tf2.jpg">
+</head>
+
+<body style="background-image: url(background.jpg); background-repeat: no-repeat; background-size: 100% 100%; background-attachment: fixed; background-position: center;">
+    <h1 style="text-align: center;"> This is image tutorial</h1>
+    <hr>
+    <p style="color:white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias cumque ducimus dolore omnis voluptatum sapiente, tempora quis sit, corrupti, tenetur quia. Sit totam similique, id iusto iste architecto quisquam nam!</p>
+    <hr>
+    <img src="nature.jpg" alt="workplace" style="float: right;" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="117,75,158,112" href="#" alt="Tree" onclick=myFunction2()>
+        <area shape="rect" coords="1,130,272,180" href="#" alt="Lake" onclick=myFunction3()>
+        <area shape="circle" coords="42,21,3" href="#" alt="Moon" onclick=myFunction1()>
+    </map>
+    <hr>
+    <picture>
+        <source media="(min-width: 650px)" srcset="nature.jpg">
+        <source media="(min-width: 450px)" srcset="workplace.jpg" width="300" height="170">
+        <img src="#" alt="Your browser is not supporting picture element">
+    </picture>
+
+    <script>
+        function myFunction1() {
+          alert("You clicked the Moon!");
+        }
+
+        function myFunction2() {
+          alert("You clicked the Tree!");
+        }
+
+        function myFunction3() {
+          alert("You clicked the Lake!");
+        }
+        </script>
+</body>
+
+</html>
