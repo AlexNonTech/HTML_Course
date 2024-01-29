@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas via HTML</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Canvas in HTML</h1>
+    <hr>
+    <canvas id="mySquare" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+    <canvas id="myCircle" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+    <canvas id="myText" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+    <canvas id="myGrad" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+        
+        <script>
+        let square = document.getElementById("mySquare");
+        let ctx_sq = square.getContext("2d");
+        ctx_sq.moveTo(0,0);
+        ctx_sq.lineTo(200,100);
+        ctx_sq.stroke();
+
+        let circle = document.getElementById("myCircle");
+        let ctx_crcl = circle.getContext("2d");
+        ctx_crcl.beginPath();
+        ctx_crcl.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx_crcl.stroke();
+
+        let word = document.getElementById("myText");
+        var ctx_word = word.getContext("2d");
+        ctx_word.font = "30px Arial";
+        ctx_word.fillText("Hello GitHub!", 10, 50);
+
+
+        var grad = document.getElementById("myGrad");
+        var ctx_grad = grad.getContext("2d");
+
+        // Create gradient
+        var grd = ctx_grad.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "white");
+
+        // Fill with gradient
+        ctx_grad.fillStyle = grd;
+        ctx_grad.fillRect(10, 10, 180, 80);
+        
+    </script>
+</body>
+
+</html>
